@@ -2,15 +2,15 @@ var tien = new Intl.NumberFormat("vn-VN");
 var tien1 = new Intl.NumberFormat("en-US");
 var my_val = 0;
 $("#monney").keyup(function () {
-    if ($("#monney").val().length >= 4) {
+    if ($("#monney").val().length >= 1) {
         my_val = ($("#monney").val()).split(",").join("");
         $("#monney").val(tien.format(my_val));
     }
 });
 document.getElementById("btn1").onclick = function () {
     var n = document.getElementById("name").value;
-    var m = document.getElementById("monney").value || 0;
-    if ((n == "") || (m == 0)) { document.getElementById("thue").innerHTML = "Thông tin không hợp lệ"; }
+    var m = document.getElementById("monney").value; console.log(isNaN(m))
+    if ((n == "") ||(m == "")) { document.getElementById("thue").innerHTML = "Thông tin không hợp lệ"; }
     else {
         m = parseInt(m.split(",").join(""));
         var p = parseInt(document.getElementById("people").value) || 0;
@@ -23,10 +23,10 @@ document.getElementById("btn1").onclick = function () {
         if ((m > 384000000) && (m <= 624000000)) { tncn = 0.25; }
         if ((m > 624000000) && (m <= 960000000)) { tncn = 0.3; }
         if (m > 960000000) { tncn = 0.2; }
-        console.log(m, n)
-        var tien_thue = tien.format((m - 4000000 - (p * 1600000)) * tncn);
+        var tien_thue = ((m - 4000000 - (p * 1600000)) * tncn);        
         if (tien_thue <= 0) { document.getElementById("thue").innerHTML = "Tiền thuế của " + n + " là : 0 VND"; }
-        else { document.getElementById("thue").innerHTML = "Tiền thuế của " + n + " là : " + tien_thue + " VND"; }
+        else { document.getElementById("thue").innerHTML = "Tiền thuế của " + n + " là : " + tien.format(tien_thue) + " VND"; }
+        
     }
 }
 
