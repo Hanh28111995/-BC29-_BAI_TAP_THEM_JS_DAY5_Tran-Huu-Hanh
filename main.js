@@ -47,7 +47,7 @@ document.getElementById("btn2").onclick = function () {
         phi2 = 20.5;
         phi3 = parseFloat(7.5 * (sokenh));
         var tong = tien1.format(phi1 + phi2 + phi3);
-        document.getElementById("tien_cap").innerHTML = "Khách hàng: " + mkh + " <br>Tiền cáp là: " + tong;
+        document.getElementById("tien_cap").innerHTML = "Khách hàng: " + mkh + " <br>Tiền cáp là: " + tong + " $";
     }
     if (check == 1) {
         var sokenhvip = document.getElementById("sk1").value;
@@ -56,7 +56,7 @@ document.getElementById("btn2").onclick = function () {
         if (sokenhvip > 10) { phi2 = 75 + 5 * (sokenhvip - 10); }
         else { phi2 = 75; }
         var tong = tien1.format(phi1 + phi2 + phi3);
-        document.getElementById("tien_cap").innerHTML = "Khách hàng: " + mkh + " <br>Tiền cáp là: " + tong;
+        document.getElementById("tien_cap").innerHTML = "Khách hàng: " + mkh + " <br>Tiền cáp là: " + tong + " $";
     }
     if ((check == "x") || (mkh == "")) { document.getElementById("tien_cap").innerHTML = "Không hợp lệ"; }
 
