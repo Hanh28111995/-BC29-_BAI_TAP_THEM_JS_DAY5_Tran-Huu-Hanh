@@ -1,0 +1,69 @@
+*
+{
+    box-sizing: border-box;
+}
+.form_row
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.form_row input
+{
+    margin-bottom: 8px;
+    width: 80%;
+}
+.form_label
+{
+    min-width: 160px;
+}
+.form_label1
+{
+    min-width: 90px;
+}
+.form_label2
+{
+    min-width: 20px;
+}
+.form_input
+{
+    flex: 1;
+}
+.form_input1
+{
+width: 15%;
+margin-right: 2%;
+}
+h1.tille
+{
+    font-size: 25px;
+    font-weight: 600;
+}
+.form_item
+{
+    box-shadow: 5px 10px 8px #888888;
+    padding: 20px;
+}
+.form_item p
+{
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    width: 80%;
+}
+.box
+{
+    display: inline-block;
+    margin-bottom: 8px;
+}
+#vip 
+{
+    display: none;
+    margin-bottom: 8px;
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+.block
+{
+    display: inline-block  !important; 
+}
