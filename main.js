@@ -1,10 +1,11 @@
 var tien = new Intl.NumberFormat("vn-VN");
 var tien1 = new Intl.NumberFormat("en-US");
 var my_val = 0;
-$("#monney").keyup(function () {
-    if ($("#monney").val().length >= 1) {
-        my_val = ($("#monney").val()).split(",").join("");
-        $("#monney").val(tien.format(my_val));
+document.getElementById("monney").addEventListener("keyup", function () {
+    if ((document.getElementById("monney").value.length) >= 1) 
+    {
+        my_val = (document.getElementById("monney").value).split(",").join("");
+        document.getElementById("monney").value = tien.format(my_val);
     }
 });
 document.getElementById("btn1").onclick = function () {
